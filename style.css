@@ -599,7 +599,7 @@ header #left-header #light-dark-mode button.dark i{
     width: 100%;;
 }
 #edit-nft .container.flex-item{
-    gap: 20px;
+    gap: 30px;
     align-items: flex-start;
 }
 #edit-nft  button.button{
@@ -646,7 +646,7 @@ header #left-header #light-dark-mode button.dark i{
 #information{
     margin-top: 2rem;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 #information >*{
     flex: 1;
@@ -662,6 +662,9 @@ header #left-header #light-dark-mode button.dark i{
     width: 100%;
     margin: 1rem 0;
     padding: 1rem;
+}
+#information input:focus,#information textarea:focus{
+    border-color: var(--blue);
 }
 #information .social-connect button.button{
     margin-bottom: 1rem;
