@@ -15,6 +15,11 @@
     --social:#5D5D6E;
     --border-color:#2F2F39;
     --border:#242431;
+    --login-form: #292f45;
+    --facebook:#3e5b95;
+    --twitter: #50acf7;
+    --github:#4c4c4c;
+    --login-border:#3b434e;
 }
 @font-face {
     font-family: 'nfts';
@@ -38,6 +43,7 @@ body{
 a{
     text-decoration: none;
     color: var(--white);
+    transition: all ease-in-out 0.2s;
 }
 ul {
     list-style-type: none;
@@ -71,6 +77,9 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .flex-item-justify-between{
     justify-content: space-between;
+}
+.flex-item-justify-center{
+    justify-content: center;
 }
 
 .button{
@@ -699,6 +708,97 @@ header #left-header #light-dark-mode button.dark i{
     width: 40px;
     height: 40px;
     border-radius: 3px;
+}
+#login{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+}
+#login-form{
+    background-color: var(--login-form);
+    text-align: center;
+    padding: 8rem 2rem 0;
+}
+#login-form form label{
+    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+#login-form form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 10px;
+    background-color: transparent;
+    border:1px solid var(--login-border);
+    color: var(--white);
+}
+#login-form form input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--f-blue);
+}
+#login-form form input[type="submit"]{
+    border:none;
+    background-color: var(--blue);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all ease-in-out .2s;
+}
+#login-form form input[type="submit"]:hover{
+    background-color: var(--purple);
+}
+#login-form p{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+#login-form p a{
+    color: var(--blue);
+}
+#login-form p a:hover{
+    color: var(--p-gray);
+}
+#line{
+    margin-top: 2rem;
+}
+#line hr{
+    border-color: var(--p-gray);
+}
+#line span{
+    position: relative;
+    display: inline-block;
+    background-color: var(--login-form);
+    padding: 2px;
+    top:-25px;
+}
+#social-login a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    color: var(--white);
+    border-radius: 5px;
+    transform: translateY(0);
+    margin-top: 1.5rem;
+}
+#social-login a:hover{
+    transform: translateY(-5px);
+}
+#social-login a:not(:last-child){
+    margin-right:5px;
+}
+#social-login a:first-child{
+    background-color:var(--facebook);
+}
+#social-login a:nth-child(2){
+    background-color:var(--twitter);
+}
+#social-login a:nth-child(3){
+    background-color:var(--f-red);
+}
+#social-login a:nth-child(4){
+    background-color:var(--github);
 }
 body.inner header{
     position: fixed;
